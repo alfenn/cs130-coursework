@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;437;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    margin: 0px;
+    font-family: Inter, sans-serif;
+    padding-left: 300px;
+    padding-right: 300px;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 128px;
+    letter-spacing: -1.5px;
+    background: -webkit-linear-gradient(left, magenta, #FDD231);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 32px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-position: outside;
+    color: gray;
+    margin-bottom: 60px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+hr {
+    margin-top: -35px;
+    margin-bottom: 20px;
+    height: 4px;
+    border: none;
+    /* background-color: rgb(97, 96, 96); */
+    background-image: linear-gradient(to right , white, black, black);
+    border-radius: 5px;
+}
+
+a {
+    color: #FDD231;
+    text-decoration: none;
+}
+
+.link-style {
+    
+}
+
+.link-caption {
+
+}
