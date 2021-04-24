@@ -6,50 +6,50 @@
 
 body {
     background: black;
-    margin: 0px;
+    /* margin: 0px; */
     font-family: Inter, sans-serif;
-    padding-left: 300px;
-    padding-right: 300px;
     color: white;
-    font-size: large;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.2;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 128px;
+    /* font-size: 128px; */
+    font-size: 75px;
     letter-spacing: -1.5px;
-    background: -webkit-linear-gradient(left, magenta, #FDD231);
+    background: -webkit-linear-gradient(left, magenta, #FDD231,#FDD231);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 h2 {
-    margin-top: 40px;
     font-size: 32px;
+    margin-bottom: -4px;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     list-style-position: outside;
     color: gray;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 hr {
-    margin-top: -35px;
+    margin-top: -21px;
     margin-bottom: 20px;
-    height: 4px;
+    height: 2px;
     border: none;
-    /* background-color: rgb(97, 96, 96); */
-    background-image: linear-gradient(to right , white, black, black);
+    background-color: rgb(97, 96, 96);
+    /* background-image: linear-gradient(to right , white, black, black); */
     border-radius: 5px;
 }
 
@@ -58,10 +58,49 @@ a {
     text-decoration: none;
 }
 
-.link-style {
-    
+.everything {
+    display: grid;
+    grid-template-columns: auto 735px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        ". head ."
+        ". main .";
 }
 
-.link-caption {
+#homepage-header {
+    grid-area: head;
+}
 
+main {
+    grid-area: main;
+}
+
+main > section {
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: 1s;
+    border: solid rgb(27, 27, 27) 5px;
+    border-radius: 50px;
+    margin-bottom: 30px
+}
+
+main > section:hover {
+    background-color: rgb(27, 27, 27);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: solid magenta 10px;
+    border-radius: 30px;
+}
+
+main > section#tutorials:hover {
+    border: solid magenta 8px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 850px) {
+    .everything {
+        grid-template-columns: auto 600px auto;
+    }
 }
