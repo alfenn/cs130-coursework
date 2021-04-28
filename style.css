@@ -86,17 +86,16 @@ main > section {
 
 main > section:hover {
     background-color: rgb(27, 27, 27);
-    margin-bottom: 50px;
-    margin-top: 50px;
-    border: solid magenta 10px;
-    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    /* margin-top: 50px; */
+    border: solid magenta 8px;
+    border-radius: 40px;
 }
 
 main > section#tutorials:hover {
     border: solid magenta 8px;
-    border-radius: 30px;
-    margin-bottom: 50px;
-    margin-top: 0;
+    /* margin-bottom: 50px; */
+    /* margin-top: 0; */
 }
 
 @media screen and (max-width: 850px) {
