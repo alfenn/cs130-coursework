@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    /* color: #fff; */
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: clip;
+    z-index: 3;
+}
+
+/* nav {
+    margin-top: 145px;
+} */
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+#sidebar {
+    padding-left: 24px;
+    padding-top: 15px;
+}
+
+#sidebar h1 {
+    height: 40px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: -4px;
+}
+
+#sidebar h1 i {
+    font-size: 50px;
+}
+
+#sidebar a {
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #DDDDDD;
+}
+
+#sidebar a:hover {
+    color: white;
+}
+
+#sidebar a i {
+    width: 40px;
+}
+
+#sidebar .selected {
+    border-left: solid 4px #1DBA54;
+    margin-left: -4px;
+    color: white;
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+main header a {
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 45px; 
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    margin-right: 20px;
+    margin-top: 55px;
+    margin-bottom: 10px; /* giving a little space under the fixed header when scrolling */
+}
+
+main header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#upgrade {
+    border: #DDDDDD solid 1.5px;
+    color: #DDDDDD;
+}
+
+#upgrade:hover {
+    background-color: #2c2c2c;
+}
+
+#profile {
+    background: #222222;
+    font-weight: 700;
+    color: white;
+}
+
+#profile:hover {
+    background-color: #2c2c2c;
+}
+
+#profile i {
+    padding-right: 12px;
+}
+
+main nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-bottom: 25px;
+}
+
+main nav  a {
+    text-transform: uppercase;
+    font-size: 17;
+    font-weight: bold;
+    color: #DDDDDD;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: montserrat;
+    padding: 4px;
+}
+
+main nav a:hover {
+    color: white;
+}
+
+main nav a.selected {
+    color: white;
+    border-bottom: 4px solid #1DBA54;
+}
+
+/* fixing scrollbar so it's not occluded by header */
+.container {
+    margin-top: 145px;
+    height: calc(100vh - 110px);
+    overflow: auto;
+    padding-bottom: 140px;
+}
+
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+
+
+#featured-content {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    width: 180px;
+    background-color: #222222;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 20px;
+    height: 300px;
+    position: relative;
+}
+
+
+.artist-card h3 {
+    margin-bottom: -10px;
+}
+
+.artist-card p {
+    color: #DDD;
+}
+
+.artist-card .play-button {
+    display: none;
+}
+
+.play-button i {
+    /* Question: why didn't centering it using flexbox work? */
+    /* height: 16.57px; */
+    /* width: 16.57px; */
+
+    /* alternative method of centering. basically just manually playing with it */
+    position: absolute;
+    top: 28%;
+    left: 35%;
+}
+
+.artist-card:hover .play-button{
+    display: flex;
+    background: #1DBA54;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    /* fix play button to bottom right of the artist card */
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    /* center icon within container */
+    /* justify-content: center; */
+    /* align-content: center; */
+}
+
+.artist-card img {
+    height: 130px;
+    width: auto;
+    border-radius: 50%;
+}
+
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+@media (max-width: 665px) {
+    #upgrade {
+        display: none;
+    }
+}
+
+/* at 480px width exactly, it gets resized to 2-across */
+/* note: any smaller and I start seeing weird a white space under the player, but I'mm pretty sure that's because of 
+    min-width set in player.css, which was provided */
+    @media (max-width: 480px) {
+    #sidebar {
+        display: none;
+    }
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 100px;
+        grid-template-areas:
+           "main"
+           "bottom";
+    }
+    #upgrade {
+        display: none;
+    }
+}
