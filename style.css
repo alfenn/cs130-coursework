@@ -78,7 +78,7 @@ main {
 main > section {
     padding-left: 40px;
     padding-right: 40px;
-    transition: 1s;
+    transition: 1.2s;
     border: solid rgb(27, 27, 27) 5px;
     border-radius: 50px;
     margin-bottom: 30px
@@ -88,12 +88,12 @@ main > section:hover {
     background-color: rgb(27, 27, 27);
     /* margin-bottom: 50px; */
     /* margin-top: 50px; */
-    border: solid magenta 8px;
+    border: solid magenta 5px;
     border-radius: 40px;
 }
 
 main > section#tutorials:hover {
-    border: solid magenta 8px;
+    border: solid magenta 5px;
     /* margin-bottom: 50px; */
     /* margin-top: 0; */
 }

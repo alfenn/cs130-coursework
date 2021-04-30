@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial 5 listing page</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+    /* body {
+            display: grid;
+            grid-template-columns: auto 400px auto;
+            grid-template-areas: 
+                ". everything .";
+        } */
+    .everything > div {
+        grid-area: head;
+    }
+
+    ul {
+        list-style-type: decimal;
+        list-style-position: inside;
+        grid-area: main;
+    }
+
+    hr {
+        margin-top: initial;
+        margin-bottom: initial;
+        /* background-color: white; */
+        height: 1px;
+    }
+
+    h2 {
+        margin-bottom: initial;
+    }
+</style>
+
+<body>
+    <div class="everything">
+        <div>
+            <h2>Tutorial 5 listing page</h2>
+        </div>
+        
+        <ul>
+            
+            <li>
+                <a href="font-switcher/index.html">Font switcher</a>
+            </li>
+            <li>
+                <a href="theme-switcher/index.html">Theme switcher</a>
+            </li>
+            <li>
+                <a href="page-turner/index.html">Page turner</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
