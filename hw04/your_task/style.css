@@ -182,6 +182,11 @@ header .fa-search {
     border-radius: 20px;
     height: 340px;
 }
+
+.artist-card:hover {
+    cursor: pointer;
+}
+
 .artist-card > div {
     padding: 20px;
 }
@@ -206,6 +211,12 @@ header .fa-search {
     border: dotted 1px #999;
     overflow-x: hidden;
 }
+
+.album-card > div:hover {
+    cursor: pointer;
+    background: #F0F0F0;
+}
+
 .album-card h3 {
     font-size: 0.95em;
     margin-bottom: 0px;
@@ -455,4 +466,8 @@ input[type=range]::-moz-range-track {
     .album-card h3 {
         max-width: calc((100vw - 250px) / 2);
     }
+}
+
+footer {
+    display:none;    
 }
