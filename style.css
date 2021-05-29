@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;437;500;600;700;800;900&display=swap');
 
+.preload * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -78,7 +85,7 @@ main {
 main > section {
     padding-left: 40px;
     padding-right: 40px;
-    transition: 1.2s;
+    transition: 0.8s;
     border: solid rgb(27, 27, 27) 5px;
     border-radius: 50px;
     margin-bottom: 30px
