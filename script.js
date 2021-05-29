@@ -1,5 +1,5 @@
 const restoreAnimations = () => {
-    document.querySelector('bod').removeClass('preload');
+    document.querySelector('body').removeClass('preload');
 }
 
 document.onload = restoreAnimations;
