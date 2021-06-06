@@ -15,59 +15,26 @@
             <a href="index.html" id="logo">Vaxualize</a>
         </div>
         <div id="not-logo">
-            <div id="search">
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                <input type="search" placeholder="Enter zip code" value>
-            </div>
+            <input type="search" placeholder="Enter zip code" id="search" value>
             <a href="about.html">About</a>
             <a href="https://github.com/alfenn/cs130-coursework/tree/main/final-project">GitHub</a>
         </div>
     </nav>
 
-    <section id="chart">
-        Chart goes here
-        <canvas id="myChart" width="400" height="400"></canvas>
-        
+    <section id="stores">
+
     </section>
-    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+
+    <section id="location-info">
+        <div id="location-info-not-chart" style="padding: 10px;">
+            <h2>No location chosen</h2>
+        </div>
+        <canvas id="myChart"></canvas>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
+    <script type="text/javascript" src="chart.js"></script>
+    
 </body>
 
 </html>
