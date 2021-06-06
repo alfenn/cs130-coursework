@@ -192,7 +192,7 @@ const filterAndDisplayStores = (zip) => {
                         localData[i].availability = apiData[i].availability
                     }
                     const apiKey = 'R8Jk1lk0CB2b9cO8qvnae8or0pOgG9HV'
-                    fetch(`http://open.mapquestapi.com/geocoding/v1/address?key=${apiKey}&location=${zip}`)
+                    fetch(`https://open.mapquestapi.com/geocoding/v1/address?key=${apiKey}&location=${zip}`)
                         .then(response => {
                             return response.json()
                         })
