@@ -176,7 +176,8 @@ const distance = (lat1, lon1, lat2, lon2) => {
 }
 
 const filterAndDisplayStores = (zip) => {
-    fetch('/parser/data.json')
+    // fetch('/parser/data.json')   // local path doesn't work after hosting on github pages
+    fetch('https://alfenn.github.io/cs130-coursework/final-project/parser/data.json')
         .then(response => {
             return response.json()
         })
