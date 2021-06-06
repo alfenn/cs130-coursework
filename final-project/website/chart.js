@@ -221,8 +221,12 @@ const filterAndDisplayStores = (zip) => {
                             filterStores(indicesToRemove, localData)
                             console.log('filtered data:', localData)
                             if (localData.length == 0) {
-                                document.querySelector('#location-info-not-chart').innerHTML = `
+                                document.querySelector('#location-info').innerHTML = `
                                     <h2>No Safeway locations within 10 miles</h2>`
+                            }
+                            else {
+                                document.querySelector('#location-info').innerHTML = `
+                                    <h2>No location chosen</h2>`
                             }
                             displayStores(localData)
                         });
@@ -242,7 +246,7 @@ const search = (ev) => {
 document.querySelector('#search').onkeyup = (ev) => {
     if (ev.keyCode === 13) {
         ev.preventDefault()
-        search()
+        search()        
     }
 }
 
