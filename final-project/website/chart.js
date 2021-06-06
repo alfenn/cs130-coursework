@@ -258,7 +258,7 @@ const displayAbout = (ev) => {
             <h3>How Vaxualize aims to help</h3>
                 <p>By building on Safeway's existing vaccine infrastructure, this site attempts to streamline the process of getting vaccinated through the following.</p>
                 <ol>
-                    <li><strong>Guidance when vaccine appointments are not available: </strong>shares a check-back time based on when appointments have been most available in the past.</li>
+                    <li><strong>Guidance when vaccine appointments are not available: </strong>shares a time to try again based on when appointments have been most available in the past.</li>
                     <li><strong>Stripped-down interface: </strong>removes anything not directly relevant to scheduling an appointment, hopefully making it intuitive and quick to navigate.</li>
                 </ol>`
 }
