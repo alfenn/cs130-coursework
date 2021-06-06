@@ -84,7 +84,7 @@ const displayInfo = (storeEl, arr) => {
         const correspondingTime = myLabels[indexOfValue(arr, maxAvailability)]
         template += `
             <em>${correspondingTime}</em></p>
-            <p>Your best shot at landing an appointment is to check back at around that time.</p>`
+            <p>Your best shot at landing an appointment at this location is to check back at around that time.</p>`
     }
     displayInfoEl.innerHTML = template
 }
