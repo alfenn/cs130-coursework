@@ -70,3 +70,11 @@ nav>div {
 #store-card:hover {
     border: 2px black solid;
 }
+
+section {
+    padding: 10px;
+}
+
+li {
+    padding-bottom: 5px;
+}
