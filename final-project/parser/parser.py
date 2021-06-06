@@ -22,8 +22,12 @@ json_file = open('data.json')
 local_data = json.loads(json_file.read())
 for i in range(len(api_data)):
     if api_data[i]['availability'] == 'yes':
+        if index == 0:  # 24:00 should be duplicate of 0:00
+            local_data[i]['historic_data'][len(api_data) - 1].append(1)
         local_data[i]['historic_data'][index].append(1)
-    else:   # availability == 'no'
+    else:   # availability == 'no' 
+        if index == 0:  # 24:00 should be duplicate of 0:00
+            local_data[i]['historic_data'][len(api_data) - 1].append(0)
         local_data[i]['historic_data'][index].append(0)
 json_file.close()
 
